@@ -1,7 +1,7 @@
 import random
 
 class OutfitRecommendation:
-  def __inint__(self, wardrobe):
+  def __init__(self, wardrobe):
     self.wardrobe = wardrobe
 
   def GetCleanClothes(self):
