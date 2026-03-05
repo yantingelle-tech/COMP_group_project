@@ -107,7 +107,9 @@ class OutfitRecommendation:
       return {"outfit": outfit, "occasion": occasion}
 
 
-
+if __name__ == "__main__":
+    system = OutfitRecommendation()
+    system.run()
 
 
 
