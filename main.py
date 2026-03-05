@@ -1,5 +1,5 @@
 class Clothing:
-  def __inint__(self, name, c_type, color, season, style, meterial):
+  def __init__(self, name, c_type, color, season, style, meterial):
     self.name = name  #like "black jeans"
     self.c_type = c_type  #like "jeans", "tops", "shoes"
     self.color = color  #like "black", "white", "blue"
