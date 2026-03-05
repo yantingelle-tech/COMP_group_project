@@ -29,7 +29,7 @@ class OutfitRecommendation:
     if not clean:
       return {"error": "there are no clean clothes in the wardrobe!"}
   
-    valid = [c for c in clean if c.season in (c.season, "四季")]
+    valid = [c for c in clean if c.season in (c.season, "season")]
     if not valid:
       return {"error": f"there are no clean clothes for {season} season!"}
       
