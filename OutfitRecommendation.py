@@ -29,16 +29,16 @@ class OutfitRecommendation:
     if not clean:
       return {"error": "there are no clean clothes in the wardrobe!"}
   
-    valid = [c for c in clean if c.season in (c.season, "season")]
+    valid = [c for c in clean if c.season == season]
     if not valid:
       return {"error": f"there are no clean clothes for {season} season!"}
       
-    groups = self.GroupByType(vaild)
+    groups = self.GroupByType(valid)
     
     outfits = []
-    tops = groups ["tops"]
-    pants = groups ["pants"]
-    shoes = groups ["shoes"]
+    tops = groups["tops"]
+    pants = groups["pants"]
+    shoes = groups["shoes"]
     jackets = groups.get("jackets", [])
     accessories = groups.get("accessories", [])
 
@@ -107,9 +107,33 @@ class OutfitRecommendation:
       return {"outfit": outfit, "occasion": occasion}
 
 
+class Clothing:   #test
+    def __init__(self, name, c_type, season, style, is_clean=True):
+        self.name = name
+        self.type = c_type  # Fix the attribute name
+        self.season = season
+        self.style = style
+        self.is_clean = is_clean
+
+class Wardrobe:   #test
+    def __init__(self):
+        self.clothes = [
+            Clothing("Blue T-shirt", "tops", "summer", "casual"),
+            Clothing("Jeans", "pants", "summer", "casual"),
+            Clothing("Sneakers", "shoes", "summer", "casual"),
+            Clothing("Formal Shirt", "tops", "winter", "formal"),
+            Clothing("Dress Pants", "pants", "winter", "formal"),
+            Clothing("Dress Shoes", "shoes", "winter", "formal"),
+        ]
+
 if __name__ == "__main__":
-    system = OutfitRecommendation()
-    system.run()
+    wardrobe = Wardrobe()
+    system = OutfitRecommendation(wardrobe)
+    
+    # Test seasonal recommendation
+    print(system.RecommendBySeason("summer"))
+    print(system.RecommendByOccasion("casual"))
+
 
 
 
