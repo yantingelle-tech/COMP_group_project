@@ -1,6 +1,0 @@
-# COMP_group_project
-Task 1:
-Our group is dedicated to creating an intelligent wardrobe management system using OOP programming. Nowadays, the Internet of Things is facilitating people's lives, but there is a lack of an intelligent wardrobe system on the market that can help you manage your clothes. This system can record information such as the style, material, color, position in the wardrobe, and neatness of each piece of clothing, helping you quickly find your favorite clothes before starting your busy daily work and even match your outfit for the day. At present, the project has completed the construction of the basic operation module, storage module, search module, and outfit recommendation module. However, further modifications are still needed to ensure the integration and coordination of each module. The files "Basic wardrobe control system.py" and "ALLClothes.py" contains the basic operation module, storage module, search module, users can run from the file "Basic wardrobe control system.py".Files "OutfitRecommendation.py" and "main.py" contain the outfit recommendation module, users can run by the file "OutfitRecommendation.py".
-
-Task 2:
-After discussion among our group members, we tentatively decided to study the data structure of hash tables and hash lookup algorithms.
