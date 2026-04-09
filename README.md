@@ -5,11 +5,11 @@ With the accelerating pace of life, people own an increasing number of clothes, 
 
 ---
 ## Contents
-* [System Module Descriptions](##Systeam_Module_descriptions)                                       
-* [Program Execution and Detailed Operation Guide](##Program_Execution_and_Detailed_Operation_Guide)
+* [System Module Descriptions](#001)                                       
+* [Program Execution and Detailed Operation Guide](#002)
 ---
 
-## System Module Descriptions
+## <span id = "001">System Module Descriptions
 
 This system follows object-oriented programming principles and consists of multiple independent modules. Below is a summary of the core functionalities of each Python file:
 
@@ -39,7 +39,7 @@ This system follows object-oriented programming principles and consists of multi
 
 ---
 
-## Program Execution and Detailed Operation Guide
+## <span id="002">Program Execution and Detailed Operation Guide
 
 ### 1. Starting the Program
 The entry point of the program is `main.py`. Please run this file in your terminal or IDE:
