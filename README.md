@@ -7,6 +7,11 @@ With the accelerating pace of life, people own an increasing number of clothes, 
 ## Contents
 * [System Module Descriptions](#001)                                       
 * [Program Execution and Detailed Operation Guide](#002)
+    * [Starting the Program](#0021)
+    * [Add Clothes](#0022)
+    * [Delete Clothes](#0023)
+    * [Modify Clothes Attributes](#0024)
+    * [Outfit Recommendation](#0025)
 ---
 
 ## <span id = "001">System Module Descriptions
@@ -41,23 +46,23 @@ This system follows object-oriented programming principles and consists of multi
 
 ## <span id="002">Program Execution and Detailed Operation Guide
 
-### 1. Starting the Program
-The entry point of the program is `main.py`. Please run this file in your terminal or IDE:
+### <span id="0021">1. Starting the Program
+The entry point of the program is `main.py`. Please run this file in your terminal or IDE (PyCharm/Vs Code)just click the Running button:
 ```bash
 python main.py
 ```
 Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` data file exists in the current directory. If it does not exist, the system will use a predefined list of initial clothing data to create the file. Afterward, it will display the system's welcome page (Main Menu). Enter `yes` to proceed to the function selection center.
 
-### 2. Add Clothes
+### <span id="0022">2. Add Clothes
 *   **Navigation**: Enter `3` in the main menu to access the add/delete menu, then enter `1` to select adding new clothes.
 *   **Operation Details**: The system will prompt you sequentially to enter the clothing code (e.g., `shirt5`), kind, size, color, material, season, scene, state, and position. Once all information is entered, the data will be saved automatically.
 *   **Important Note (Regarding Clothing Kinds)**: When inputting the **kind**, please stick to the preset categories, such as `shirt`, `pants` or `trousers`, `shoes`, and `jackets`. **If you input a new kind that the system cannot recognize (e.g., skirt, dress, sweater, or if you make a spelling mistake), the recommendation system will default to categorizing all these unrecognizable items into `accessories` when calling the `GroupByType` method**. This may result in inaccurate outfit recommendations.
 
-### 3. Delete Clothes
+### <span id="0023">3. Delete Clothes
 *   **Navigation**: Enter `3` in the main menu, then enter `2` to select deleting clothes.
 *   **Operation Details**: Enter the exact code of the clothing item you wish to delete (e.g., `shirt1`). If the item exists in the system, it will be permanently removed from the database and the changes will be saved. If it does not exist, the system will prompt you to use the Review function to check your clothing codes first.
 
-### 4. Modify Clothes Attributes
+### <span id="0024">4. Modify Clothes Attributes
 *   **Navigation**: Enter `2` in the main menu, then enter `2` to choose modifying attributes directly.
 *   **Operation Details**:
     1. The system will first trigger the search function, asking you to enter the code or attribute of the clothes you want to modify (e.g., type `shirt1`).
@@ -66,7 +71,7 @@ Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` 
     4. The system will confirm that the modification was successful and automatically save the changes to the JSON file.
 *   **Note**: If you modify the `kind` attribute here, you must still adhere to the input specifications for "kind" mentioned in the "Add Clothes" section above. Otherwise, the item will be incorrectly categorized under `accessories`.
 
-### 5. Outfit Recommendation
+### <span id="0025">5. Outfit Recommendation
 *   **Navigation**: Enter `4` in the main menu to access the recommendation system.
 *   **Operation Details**:
     *   You can request recommendations based on the **season**: input `spring`, `summer`, `autumn`, or `winter`.
@@ -77,7 +82,12 @@ Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` 
 
 
 
-# COMP2090SEF Task 2: Graph Data Structure & Dijkstra's Algorithm
+# COMP2090SEF Task 2: Graph Data Structure & Dijkstra's Algorithm            
+
+## Project Overview
+This project of the COMP2090SEF course Task 2, mainly demonstrating the self-study and application of a new data structure (Graph) and a new algorithm (Dijkstra's Algorithm) that were not covered in class.
+
+This project calculates the shortest path between cities using Dijkstra's algorithm by building a weighted undirected graph.
 ---
 ## Contents
 * [Part 1: Graph ADT (Abstract Data Type Implementation)](#003)
@@ -92,12 +102,6 @@ Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` 
     * [The Core Loop Logic of the Algorithm](#0043)
     * [How the Algorithm Traces the Path](#0044)
     * [Data Uploading and Program Running Method](#0045)
----
-
-This project of the COMP2090SEF course Task 2, mainly demonstrating the self-study and application of a new data structure (Graph) and a new algorithm (Dijkstra's Algorithm) that were not covered in class.
-
-This project calculates the shortest path between cities using Dijkstra's algorithm by building a weighted undirected graph (implemented with nested dictionaries).
-
 ---
 
 ## <span id = "003">Part 1: Graph ADT (Abstract Data Type Implementation)
@@ -165,7 +169,7 @@ In the initialization phase of `__init__` and `calculate`, we set up three key d
 *   **`self.previous = {}` (Dictionary)**: Used to record the **previous vertex** (i.e., the last node) on the shortest path to the current vertex. This is crucial for tracing the complete path at the end. Initially, all values are `None`.
 *   **`self.unvisited = []` (List)**: Records all vertices that have not yet completed the shortest path calculation. Initially, all vertices in the graph are stored in this list [3].
 
-### <span id = "0043">3. The Core Loop Logic of the Algorithm (Combined with Code)
+### <span id = "0043">3. The Core Loop Logic of the Algorithm
 
 *   **Outer `while` loop**: 
     ```python
@@ -201,7 +205,7 @@ while current is not None:
     current = self.previous[current]
 path.reverse()
 ```
-This utilizes the previously saved `previous` dictionary. Starting from the target `end` point, it continuously looks up its previous node (i.e., where it came from in the previous step) and appends them one by one to the `path` list until the previous node is `None` (i.e., it has backtracked to the starting point). Finally, use `.reverse()` to flip the list to get a forward-flowing route from the start to the end.
+This utilizes the previously saved `previous` dictionary. Starting from the target `end` point, it continuously looks up its previous node (i.e., where it came from in the previous step) and appends them one by one to the `path` list until the previous node is `None` (means that it has backtracked to the starting point). Finally, use `.reverse()` to flip the list to get a forward-flowing route from the start to the end.
 
 ### <span id = "0045">5. Data Uploading and Program Running Method
 
