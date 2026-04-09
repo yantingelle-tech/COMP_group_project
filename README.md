@@ -5,8 +5,8 @@ With the accelerating pace of life, people own an increasing number of clothes, 
 
 ---
 ## Contents
-- [System Module Descriptions](#Systeam_Module_descriptions)                                       
-- [Program Execution and Detailed Operation Guide](#Program_Execution_and_Detailed_Operation_Guide)
+* [System Module Descriptions](#Systeam_Module_descriptions)                                       
+* [Program Execution and Detailed Operation Guide](#Program_Execution_and_Detailed_Operation_Guide)
 ---
 
 ## System Module Descriptions
