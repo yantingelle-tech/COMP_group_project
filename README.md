@@ -1,4 +1,4 @@
-# Intelligent Wardrobe Management and Outfit Recommendation System (INTELLIGENCE Wardrobe)
+# COMP2090SEF Task 1:Intelligent Wardrobe Management and Outfit Recommendation System
 
 ## Project Overview
 With the accelerating pace of life, people own an increasing number of clothes, making it easy to forget where items are stored or leaving no time to plan daily outfits. This project aims to develop a multi-module Python application utilizing Object-Oriented Programming (OOP) to help users effectively manage their wardrobe information (such as location, material, and cleanliness) and provide random outfit recommendations based on specific user needs.
