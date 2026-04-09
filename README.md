@@ -49,7 +49,7 @@ python main.py
 Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` data file exists in the current directory. If it does not exist, the system will use a predefined list of initial clothing data to create the file. Afterward, it will display the system's welcome page (Main Menu) [4, 5]. Enter `yes` to proceed to the function selection center.
 
 ### 2. Add Clothes
-*   **Navigation**: Enter `3` in the main menu to access the add/delete menu, then enter `1` to select adding new clothes [1].
+*   **Navigation**: Enter `3` in the main menu to access the add/delete menu, then enter `1` to select adding new clothes.
 *   **Operation Details**: The system will prompt you sequentially to enter the clothing code (e.g., `shirt5`), kind, size, color, material, season, scene, state, and position. Once all information is entered, the data will be saved automatically.
 *   **Important Note (Regarding Clothing Kinds)**: When inputting the **kind**, please stick to the preset categories, such as `shirt`, `pants` or `trousers`, `shoes`, and `jackets`. **If you input a new kind that the system cannot recognize (e.g., skirt, dress, sweater, or if you make a spelling mistake), the recommendation system will default to categorizing all these unrecognizable items into `accessories` when calling the `GroupByType` method**. This may result in inaccurate outfit recommendations.
 
