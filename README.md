@@ -109,7 +109,9 @@ Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` 
 ### <span id="0022">2. Add Clothes
 *   **Navigation**: Enter `3` in the main menu to access the add/delete menu, then enter `1` to select adding new clothes.
 *   **Operation Details**: The system will prompt you sequentially to enter the clothing code (e.g., `shirt5`), kind, size, color, material, season, scene, state, and position. Once all information is entered, the data will be saved automatically.
-*   **Important Note (Regarding Clothing Kinds)**: When inputting the **kind**, please stick to the preset categories, such as `shirt`, `pants` or `trousers`, `shoes`, and `jackets`. **If you input a new kind that the system cannot recognize (e.g., skirt, dress, sweater, or if you make a spelling mistake), the recommendation system will default to categorizing all these unrecognizable items into `accessories` when calling the `GroupByType` method**. This may result in inaccurate outfit recommendations.
+*   **❗️Important Note 1(Regarding Clothing Kinds)**: When inputting the **kind**, please stick to the preset categories, such as `shirt`, `pants` or `trousers`, `shoes`, and `jackets`. **If you input a new kind that the system cannot recognize (e.g., skirt, dress, sweater, or if you make a spelling mistake), the recommendation system will default to categorizing all these unrecognizable items into `accessories` when calling the `GroupByType` method**. This may result in inaccurate outfit recommendations. 
+*   **❗️Important Note 2(Regarding Clothing Storage Position)** Shirt and jackets are stored at position 1, pants at position 2, shoes at position 3, all dirty clothes at position4, accessories at position 5.
+
 
 ### <span id="0023">3. Delete Clothes
 *   **Navigation**: Enter `3` in the main menu, then enter `2` to select deleting clothes.
@@ -120,7 +122,7 @@ Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` 
 *   **Operation Details**:
     1. The system will first trigger the search function, asking you to enter the code or attribute of the clothes you want to modify (e.g., type `shirt1`).
     2. After successfully locating the item, the system will present a list of modifiable attributes (name, kind, size, color, material, season, scene, state, position).
-    3. Type the name of the attribute you wish to change (e.g., if you washed the item, type `state`), and then type the new value (e.g., `clean`).
+    3. Type the name of the attribute you wish to change (e.g., if you washed the item, type `state`), and then type the new value (e.g., `clean`). ❗️It should be noted that if the state of the clothes is changed to "dirty", they will be automatically moved to position 4, a dedicated area for dirty clothes.
     4. The system will confirm that the modification was successful and automatically save the changes to the JSON file.
 *   **Note**: If you modify the `kind` attribute here, you must still adhere to the input specifications for "kind" mentioned in the "Add Clothes" section above. Otherwise, the item will be incorrectly categorized under `accessories`.
 
