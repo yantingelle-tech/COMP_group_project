@@ -6,7 +6,7 @@ With the accelerating pace of life, people own an increasing number of clothes, 
 ---
 ## Contents
 * [System Module Descriptions](#001)                                       
-* [Program Execution and Detailed Operation Guide](#002)
+* [⚠️Program Execution and Detailed Operation Guide](#002)
     * [Starting the Program](#0021)
     * [Add Clothes](#0022)
     * [Delete Clothes](#0023)
@@ -147,14 +147,14 @@ This project calculates the shortest path between cities using Dijkstra's algori
     * [Explanation of Functions in the `Graph` Class](#0031)
     * [The Role and Working Principle of Nested Dictionaries](#0032)
     * [How Graph Data is Uploaded and Information is Obtained](#0033)
-    * [Method to Run the Programh](#0034)
+    * [⚠️Method to Run the Programh](#0034)
                                      
 * [Part 2: Dijkstra's Algorithm](#004)
     * [Explanation of Functions in the `Dijkstra` Class](#0041)
     * [The Role of Data Containers During Initialization](#0042)
     * [The Core Loop Logic of the Algorithm](#0043)
     * [How the Algorithm Traces the Path](#0044)
-    * [Data Uploading and Program Running Method](#0045)
+    * [⚠️Data Uploading and Program Running Method](#0045)
 ---
 
 ## <span id = "003">Part 1: Graph ADT (Abstract Data Type Implementation)
