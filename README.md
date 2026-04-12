@@ -42,6 +42,59 @@ This system follows object-oriented programming principles and consists of multi
 *   **`SearchClothes.py` / `SelectClothes.py` / `ReviewClothes.py`**  
     Browsing and retrieval collaboration modules. Respectively responsible for: capturing user search keywords [10], accurately matching target clothing items based on keywords, and formatting and printing the search results to the user.
 
+*   **Project flowchart**  
+```mermaid
+graph TD
+    %% Startup and Initialization Layer
+    Start([Start main.py]) --> Init[JsonOperate: Check/Init clothes_data.json]
+    Init --> Welcome[Mainsystem: welcome_page]
+    
+    %% graph TD
+    %% Startup and Initialization Layer
+    Start([Start main.py]) --> Init[JsonOperate: Check/Init clothes_data.json]
+    Init --> Welcome[Mainsystem: welcome_page]
+    
+    %% Main Menu Layer
+    Welcome -- Input 'NO' --> Exit([Exit Program])
+    Welcome -- Input 'YES' --> MainMenu{Mainsystem: function_selection_page}
+    MainMenu -- Input 'Q' --> Welcome
+    
+    %% Branch 1: Review Clothes
+    MainMenu -- Input '1' --> Review[ReviewClothes: Review Module]
+    Review --> Search[SearchClothes: Input Search Keyword]
+    Search -- Input 'all' --> ShowAll[Show All Clothes]
+    Search -- Input code/attribute --> ShowSpecific[Exact Match Single / Fuzzy Match Series]
+    ShowAll --> MainMenu
+    ShowSpecific --> MainMenu
+    
+    %% Branch 2: Modify Attributes
+    MainMenu -- Input '2' --> Modify[ModifyClothesAttributes: Modify Module]
+    Modify -- Input '1' --> Modify_Review[Call ReviewClothes to Check]
+    Modify -- Input '2' --> Modify_Select[SelectClothes: Select Target]
+    Modify_Select --> Modify_Action[ALLClothes: Modify Object Attributes]
+    Modify_Action --> Modify_Save[JsonOperate: Save to JSON]
+    Modify_Save --> MainMenu
+    
+    %% Branch 3: Add or Delete
+    MainMenu -- Input '3' --> AddDel[AddOrDeleteNewClothes: Add/Delete Module]
+    AddDel -- Input '1' --> Add[Input Info & Instantiate BasicClothes Subclass]
+    AddDel -- Input '2' --> Del[Verify Code & Delete from Dictionary]
+    AddDel -- Input '3' --> AddDel_Review[Call ReviewClothes to Check]
+    Add --> AddDel_Save[JsonOperate: Save Updates to JSON]
+    Del --> AddDel_Save
+    AddDel_Save --> MainMenu
+    
+    %% Branch 4: Outfit Recommendation
+    MainMenu -- Input '4' --> Recommend[OutfitRecommendation: Recommend Module]
+    Recommend -- Choose Season --> RecSeason[Filter 'clean' Clothes by Season]
+    Recommend -- Choose Occasion --> RecOccasion[Filter 'clean' Clothes by Occasion]
+    RecSeason --> RecGroup[Group by Type: shirt, pants, shoes, etc.]
+    RecOccasion --> RecGroup
+    RecGroup --> RecOutput[Generate Random Outfit & Output]
+    RecOutput --> Recommend
+    Recommend -- Input 'q' --> MainMenu
+```
+
 ---
 
 ## <span id="002">Program Execution and Detailed Operation Guide
