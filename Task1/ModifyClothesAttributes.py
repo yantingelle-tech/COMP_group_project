@@ -13,7 +13,7 @@ class ModifyClothesAttributes:
 
         print("Select 1 to check clothes")
         print("Select 2 to modify clothes attributes directly")
-        print("Select 3 to back")
+        print("Select q to back")
         choice = input("Enter your choice: ")
         while True:
             if choice == "1":
@@ -24,7 +24,7 @@ class ModifyClothesAttributes:
                 print()
                 self.select_clothes()
                 break
-            elif choice == "3":
+            elif choice.lower() == "q":
                 print()
                 Mainsystem.Mainsystem().function_selection_page()
             else:
@@ -40,28 +40,37 @@ class ModifyClothesAttributes:
         targets = select_target_clothes.select_single_clothes(choice)
         return self.modify_attributes(targets)
 
-    def modify_attributes(self,targets):
-        """Modify the attributes of the specified clothes, save the updated data to the JSON file"""
+
+    def modify_attributes(self, targets):
+        """Modify the attributes of the specified clothing
+        and save the updated data to the json file"""
         print("Please enter your the attributes you want to modify:")
         print("Optional attributes: name, kind, size color, material, season, scene, state position")
         want_to_modify = input("Enter your choice: ")
 
-        for target_clothes_code, target_clothes in targets.items():
-            if want_to_modify not in target_clothes:
+        json_op = JsonOperate.JsonOperate()
+
+
+        target_objects = json_op.rebuild_clothes_list(targets)
+
+        for obj in target_objects:
+            target_clothes_code = obj.get_name()
+
+
+            if not hasattr(obj, want_to_modify):
                 print(f"Warning: {want_to_modify} not found in this item.")
                 self.modify_attributes(targets)
                 return
-
             else:
                 print()
                 print(f"You are changing the {want_to_modify} of {target_clothes_code}.")
                 modified_value = input("Enter your modified value: ")
-                target_clothes[want_to_modify] = modified_value
-                self.all_clothes[target_clothes_code] = target_clothes
+
+                obj.change_attribute(want_to_modify, modified_value)
+
+                self.all_clothes[target_clothes_code] = obj.return_dicts()
                 print(f"{target_clothes_code}'s {want_to_modify} has been modified to the {modified_value}.")
 
-
-        json_op = JsonOperate.JsonOperate()
         json_op.save_json(self.all_clothes)
         print("The modify attribute has been saved.")
         print()

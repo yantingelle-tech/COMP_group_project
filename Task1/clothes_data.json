@@ -1,0 +1,182 @@
+{
+    "shirt1": {
+        "kind": "shirt",
+        "size": "175",
+        "color": "white",
+        "material": "wood",
+        "season": "spring",
+        "scene": "formal",
+        "state": "clean",
+        "position": 1
+    },
+    "shirt2": {
+        "kind": "shirt",
+        "size": "170",
+        "color": "blue",
+        "material": "cotton",
+        "season": "summer",
+        "scene": "casual",
+        "state": "clean",
+        "position": 1
+    },
+    "shirt3": {
+        "kind": "shirt",
+        "size": "175",
+        "color": "gray",
+        "material": "cotton",
+        "season": "winter",
+        "scene": "formal",
+        "state": "clean",
+        "position": 1
+    },
+    "shirt4": {
+        "kind": "shirt",
+        "size": "175",
+        "color": "white",
+        "material": "wood",
+        "season": "autumn",
+        "scene": "casual",
+        "state": "clean",
+        "position": 1
+    },
+    "trousers1": {
+        "kind": "pants",
+        "size": "180",
+        "color": "black",
+        "material": "cotton",
+        "season": "winter",
+        "scene": "casual",
+        "state": "clean",
+        "position": 2
+    },
+    "trousers2": {
+        "kind": "pants",
+        "size": "175",
+        "color": "black",
+        "material": "cotton",
+        "season": "spring",
+        "scene": "formal",
+        "state": "clean",
+        "position": 2
+    },
+    "trousers3": {
+        "kind": "pants",
+        "size": "175",
+        "color": "gray",
+        "material": "cotton",
+        "season": "autumn",
+        "scene": "casual",
+        "state": "clean",
+        "position": 2
+    },
+    "pants4": {
+        "kind": "pants",
+        "size": "175",
+        "color": "gray",
+        "material": "cotton",
+        "season": "summer",
+        "scene": "casual",
+        "state": "clean",
+        "position": 2
+    },
+    "shoes1": {
+        "kind": "shoes",
+        "size": "42",
+        "color": "black",
+        "material": "cloth",
+        "season": "summer",
+        "scene": "casual",
+        "state": "clean",
+        "position": 3
+    },
+    "shoes2": {
+        "kind": "shoes",
+        "size": "42",
+        "color": "black",
+        "material": "leather",
+        "season": "spring",
+        "scene": "formal",
+        "state": "clean",
+        "position": 3
+    },
+    "shoes3": {
+        "kind": "shoes",
+        "size": "41",
+        "color": "gray",
+        "material": "cloth",
+        "season": "winter",
+        "scene": "formal",
+        "state": "clean",
+        "position": 3
+    },
+    "hat1": {
+        "kind": "hat",
+        "size": "universal",
+        "color": "red",
+        "material": "cotton",
+        "season": "summer",
+        "scene": "casual",
+        "state": "dirty",
+        "position": 4
+    },
+    "hat2": {
+        "kind": "hat",
+        "size": "universal",
+        "color": "black",
+        "material": "cotton",
+        "season": "autumn",
+        "scene": "formal",
+        "state": "clean",
+        "position": 5
+    },
+    "gloves1": {
+        "kind": "gloves",
+        "size": "universal",
+        "color": "red",
+        "material": "cotton",
+        "season": "winter",
+        "scene": "casual",
+        "state": "clean",
+        "position": 5
+    },
+    "scarf1": {
+        "kind": "scarf",
+        "size": "universal",
+        "color": "yellow",
+        "material": "cotton",
+        "season": "winter",
+        "scene": "casual",
+        "state": "clean",
+        "position": 5
+    },
+    "jacket1": {
+        "kind": "jackets",
+        "size": "175",
+        "color": "black",
+        "material": "cotton",
+        "season": "spring",
+        "scene": "casual",
+        "state": "clean",
+        "position": 1
+    },
+    "jacket2": {
+        "kind": "jackets",
+        "size": "170",
+        "color": "gray",
+        "material": "cotton",
+        "season": "autumn",
+        "scene": "formal",
+        "state": "clean",
+        "position": 1
+    },
+    "jacket3": {
+        "kind": "jackets",
+        "size": "180",
+        "color": "green",
+        "material": "cotton",
+        "season": "winter",
+        "scene": "casual",
+        "state": "clean",
+        "position": 1
+    }
+}

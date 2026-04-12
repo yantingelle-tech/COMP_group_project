@@ -64,6 +64,18 @@ class BasicClothes:
             "position": self.position
         }
 
+    def change_attribute(self, attribute_name, new_value):
+        """Modify the specified attributes of the clothing"""
+        if attribute_name == "state" and new_value =="dirty":
+            setattr(self, attribute_name, new_value)
+            setattr(self, "position", "4")
+            return True
+
+        elif hasattr(self, attribute_name):
+            setattr(self, attribute_name, new_value)
+            return True
+        return False
+
 class Shirt(BasicClothes):
     def __init__(self, name, size, color, material, season, scene, state, position):
         """Initialize the shirt class, inherit from BasicClothes and fix the type to shirt"""

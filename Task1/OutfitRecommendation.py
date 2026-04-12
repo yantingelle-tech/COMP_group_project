@@ -48,7 +48,8 @@ class OutfitRecommendation:
         return [c for c in self.wardrobe if c.state == "clean"]
 
     def GroupByType(self, clothes):
-        """Group the given clothes by their types (shirt, pants, shoes, etc.) and return the grouped dictionary"""
+        """Group the given clothes by their types (shirt, pants, shoes, etc.)
+        and return the grouped dictionary"""
         groups = {
             "shirt": [],
             "pants": [],
