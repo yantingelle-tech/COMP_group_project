@@ -140,9 +140,9 @@ Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` 
 # COMP2090SEF Task 2: Graph Data Structure & Dijkstra's Algorithm            
 
 ## Project Overview
-This project of the COMP2090SEF course Task 2, mainly demonstrating the self-study and application of a new data structure (Graph) and a new algorithm (Dijkstra's Algorithm) that were not covered in class.
 
-This project calculates the shortest path between cities using Dijkstra's algorithm by building a weighted undirected graph.             
+The COMP2090SEF course Task 2, mainly demonstrating the self-study and application of a new data structure (Graph) and a new algorithm (Dijkstra's Algorithm) that were not covered in class.Our task two calculates the shortest path between cities using Dijkstra's algorithm by building a weighted undirected graph.         
+
 Link of Introduction Video: https://drive.google.com/file/d/1Kc1qGwI1K-4Ahnf_twevxRDfPRZF9pJ0/view?usp=share_link
 ---
 ## Contents
