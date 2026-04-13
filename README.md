@@ -122,7 +122,7 @@ Upon startup, `JsonOperate` will automatically check if the `clothes_data.json` 
 *   **Operation Details**:
     1. The system will first trigger the search function, asking you to enter the code or attribute of the clothes you want to modify (e.g., type `shirt1`).
     2. After successfully locating the item, the system will present a list of modifiable attributes (name, kind, size, color, material, season, scene, state, position).
-    3. Type the name of the attribute you wish to change (e.g., if you washed the item, type `state`), and then type the new value (e.g., `clean`). ❗️It should be noted that if the state of the clothes is changed to "dirty", they will be automatically moved to position 4, a dedicated area for dirty clothes.
+    3. Type the name of the attribute you wish to change (e.g., if you washed the item, type `state`), and then type the new value (e.g., `clean`). ❗️It should be noted that if the state of the clothes is changed to "dirty", they will be automatically moved to position 4, a dedicated area for dirty clothes; oppositely,if we modified the state to clean, the clothes will automatically be put in their corresponding position.
     4. The system will confirm that the modification was successful and automatically save the changes to the JSON file.
 *   **Note**: If you modify the `kind` attribute here, you must still adhere to the input specifications for "kind" mentioned in the "Add Clothes" section above. Otherwise, the item will be incorrectly categorized under `accessories`.
 
