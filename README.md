@@ -205,7 +205,7 @@ Here, the empty dictionary `{}` plays an extremely important role; it ensures th
     The `display(self)` method uses a `for` loop to iterate through the parent dictionary `self.adj_list`, printing out each vertex and its corresponding sub-dictionary (i.e., all adjacent vertices and distance weights).
 
 ### <span id = "0034">4. Method to Run the Program
-For solely testing the Graph ADT structure (e.g., `Graph.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**. You will then see the graph structure, node list, and adjacent node information of a specified node in the console.
+For solely testing the Graph ADT structure (`Graph.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**. You will then see the graph structure, node list, and adjacent node information of a specified node in the console.
 
 ---
 
@@ -269,4 +269,4 @@ This utilizes the previously saved `previous` dictionary. Starting from the targ
 *   **Data Uploading (Main Block Initialization)**: 
     The graph and route data are hardcoded and uploaded in the `if __name__ == "__main__":` block at the bottom of the file.
     First, instantiate the graph `city_map = Graph()`. Then, pass the list containing city names into `add_vertex` through a for loop, and call `city_map.add_edge()` multiple times to manually input the distances and connections between pairs of cities (we have already prepared instances examples for you). Finally, instantiate `dijkstra = Dijkstra(city_map)`, pass in the prepared graph structure, and execute the calculation.                              
-*   For solely testing the Graph ADT structure (e.g., `Dijkstra_Algorithm.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**. If you want to see how the distance dictionary, the previous -- node dictionary, and the unvisited list change, you can set a breakpoint at the while loop of the code and use debug mode to view the data changes of the dictionary, list, and different variables.
+*   For solely testing the Dijkstra's Algorithm (`Dijkstra_Algorithm.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**. If you want to see how the distance dictionary, the previous -- node dictionary, and the unvisited list change, you can set a breakpoint at the while loop of the code and use debug mode to view the data changes of the dictionary, list, and different variables.
