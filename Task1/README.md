@@ -1,6 +1,6 @@
 # COMP2090SEF Task 1:Intelligent Wardrobe Management and Outfit Recommendation System
 
-# Link of Introduction Video: https: https://drive.google.com/drive/folders/1CzCTcL7_ofcIklY2VcSbMikDKwEp5NaX?usp=sharing
+Link of Introduction Video: https: https://drive.google.com/drive/folders/1CzCTcL7_ofcIklY2VcSbMikDKwEp5NaX?usp=sharing
 
 ## <span id="002">Program Execution and Detailed Operation Guide
 
