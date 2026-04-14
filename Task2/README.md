@@ -1,6 +1,6 @@
 # COMP2090SEF Task 2: Graph Data Structure & Dijkstra's Algorithm USER GUIDE   
 
-Link of Introduction Video: https://drive.google.com/file/d/1Kc1qGwI1K-4Ahnf_twevxRDfPRZF9pJ0/view?usp=share_link
+**Link of Introduction Video:** https://drive.google.com/file/d/1Kc1qGwI1K-4Ahnf_twevxRDfPRZF9pJ0/view?usp=share_link
 
 ### <span id = "0034">Method to Run the Code of Graph
 For solely testing the Graph ADT structure (`Graph.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**. You will then see the graph structure, node list, and adjacent node information of a specified node in the console.
