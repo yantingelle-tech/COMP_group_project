@@ -70,6 +70,22 @@ class BasicClothes:
             setattr(self, attribute_name, new_value)
             setattr(self, "position", "4")
             return True
+        elif attribute_name == "state" and new_value =="clean":
+            if self.kind == "shirt" or self.kind == "jacket":
+                setattr(self, attribute_name, new_value)
+                setattr(self, "position", "1")
+                return True
+            elif self.kind == "pants":
+                setattr(self, attribute_name, new_value)
+                setattr(self, "position", "2")
+                return True
+            elif self.kind == "shoes":
+                setattr(self, attribute_name, new_value)
+                setattr(self, "position", "3")
+                return True
+            else:
+                setattr(self, attribute_name, new_value)
+                setattr(self, "position", "5")
 
         elif hasattr(self, attribute_name):
             setattr(self, attribute_name, new_value)
