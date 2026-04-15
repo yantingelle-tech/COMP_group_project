@@ -2,8 +2,7 @@
 
 ## Project Overview
 With the accelerating pace of life, people own an increasing number of clothes, making it easy to forget where items are stored or leaving no time to plan daily outfits. This project aims to develop a multi-module Python application utilizing Object-Oriented Programming (OOP) to help users effectively manage their wardrobe information (such as location, material, and cleanliness) and provide random outfit recommendations based on specific user needs.                       
-# Link of Introduction Video: https: https://drive.google.com/drive/folders/1CzCTcL7_ofcIklY2VcSbMikDKwEp5NaX?usp=sharing
-
+# Link of Introduction Video: https://drive.google.com/file/d/1LX1VVXS8zPDDeweJMbVf-Pwf-BJZN2C3/view?usp=sharing          
 ---
 ## Contents
 * [System Module Descriptions](#001)                                       
