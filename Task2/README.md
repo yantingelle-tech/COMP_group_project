@@ -7,5 +7,5 @@ For solely testing the Graph ADT structure (`Graph.py`), you only need to open t
 
 ### <span id = "0045">Method to Run the Code of Dijkstra's Algorithm 
                                
-For solely testing the Dijkstra's Algorithm (`Dijkstra_Algorithm.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**. 
+For solely testing the Dijkstra's Algorithm (`Dijkstra_Algorithm.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**.          
 If you want to see how the distance dictionary, the previous node dictionary, and the unvisited list change, you can set a breakpoint at the while loop of the code and use debug mode to view the data changes of the dictionary, list, and different variables.
