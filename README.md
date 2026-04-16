@@ -147,7 +147,7 @@ The COMP2090SEF course Task 2, mainly demonstrating the self-study and applicati
 Link of Introduction Video: https://drive.google.com/file/d/1Kc1qGwI1K-4Ahnf_twevxRDfPRZF9pJ0/view?usp=share_link
 ---
 ## Contents
-* [Part 1: Graph ADT (Abstract Data Type Implementation)](#003)
+* [Part 1: Graph](#003)
     * [Explanation of Functions in the `Graph` Class](#0031)
     * [The Role and Working Principle of Nested Dictionaries](#0032)
     * [How Graph Data is Uploaded and Information is Obtained](#0033)
@@ -159,9 +159,10 @@ Link of Introduction Video: https://drive.google.com/file/d/1Kc1qGwI1K-4Ahnf_twe
     * [The Core Loop Logic of the Algorithm](#0043)
     * [How the Algorithm Traces the Path](#0044)
     * [⚠️Data Uploading and Program Running Method](#0045)
+    * [Dijkstra's Algorithm Running Demonstration with Test Case](#0046)
 ---
 
-## <span id = "003">Part 1: Graph ADT (Abstract Data Type Implementation)
+## <span id = "003">Part 1: Graph
 
 In this project, the Graph is implemented using an **Adjacency List** format, specifically adopting the **Nested Dictionaries** structure in Python.
 
@@ -270,3 +271,38 @@ This utilizes the previously saved `previous` dictionary. Starting from the targ
     The graph and route data are hardcoded and uploaded in the `if __name__ == "__main__":` block at the bottom of the file.
     First, instantiate the graph `city_map = Graph()`. Then, pass the list containing city names into `add_vertex` through a for loop, and call `city_map.add_edge()` multiple times to manually input the distances and connections between pairs of cities (we have already prepared instances examples for you). Finally, instantiate `dijkstra = Dijkstra(city_map)`, pass in the prepared graph structure, and execute the calculation.                              
 *   For solely testing the Dijkstra's Algorithm (`Dijkstra_Algorithm.py`), you only need to open the script file using any Python IDE (such as PyCharm, VSCode, etc.), and **directly click the Run button**. If you want to see how the distance dictionary, the previous -- node dictionary, and the unvisited list change, you can set a breakpoint at the while loop of the code and use debug mode to view the data changes of the dictionary, list, and different variables.
+
+### <span id = "0046">6. Dijkstra's Algorithm Running Demonstration with Test Case
+We'll simulate the Dijkstra algorithm step by step based on the provided code, using the graph with vertices **Beijing**, **Shanghai**, **Hangzhou**, **Guangzhou**, **Shenzhen** and the given edges. The starting vertex is **Beijing**.
+
+The table below shows the state of key data structures after each `while` iteration (including the inner `for` loop that processes neighbors).  
+
+- `distances`: current shortest distance from start to each vertex.  
+- `previous`: predecessor vertex on the shortest path.  
+- `unvisited`: list of vertices not yet processed.  
+
+---
+
+### Dijkstra Algorithm Execution Trace (Start = Beijing)
+
+| Iteration | Current Node | Min Dist Selected | Neighbor Processing (for each unvisited neighbor) | `distances` after loop | `previous` after loop | `unvisited` after loop |
+|-----------|--------------|-------------------|---------------------------------------------------|------------------------|------------------------|------------------------|
+| **1** | Beijing | 0 | **Shanghai**: new_dist = 0+1318 = 1318 < inf → **updated** (1318, prev=Beijing) | `{'Beijing':0, 'Shanghai':1318, 'Hangzhou':inf, 'Guangzhou':inf, 'Shenzhen':inf}` | `{'Beijing':None, 'Shanghai':'Beijing', 'Hangzhou':None, 'Guangzhou':None, 'Shenzhen':None}` | `['Shanghai', 'Hangzhou', 'Guangzhou', 'Shenzhen']` |
+| **2** | Shanghai | 1318 | **Hangzhou**: new = 1318+178 = 1496 < inf → **updated** (1496, prev=Shanghai) <br> **Guangzhou**: new = 1318+1212 = 2530 < inf → **updated** (2530, prev=Shanghai) <br> **Shenzhen**: new = 1318+1210 = 2528 < inf → **updated** (2528, prev=Shanghai) <br> *Beijing is visited, skipped* | `{'Beijing':0, 'Shanghai':1318, 'Hangzhou':1496, 'Guangzhou':2530, 'Shenzhen':2528}` | `{'Beijing':None, 'Shanghai':'Beijing', 'Hangzhou':'Shanghai', 'Guangzhou':'Shanghai', 'Shenzhen':'Shanghai'}` | `['Hangzhou', 'Guangzhou', 'Shenzhen']` |
+| **3** | Hangzhou | 1496 | **Guangzhou**: new = 1496+1150 = 2646 → **not updated** (2530 < 2646) <br> *Shanghai visited, skipped* | No changes | No changes | `['Guangzhou', 'Shenzhen']` |
+| **4** | Shenzhen | 2528 | **Guangzhou**: new = 2528+137 = 2665 → **not updated** (2530 < 2665) <br> *Shanghai visited, skipped* | No changes | No changes | `['Guangzhou']` |
+| **5** | Guangzhou | 2530 | *All neighbors (Shanghai, Shenzhen, Hangzhou) are already visited → skipped* | No changes | No changes | `[]` (empty) |
+
+---
+
+### Explanation of the Trace
+
+1. **Iteration 1**: Start from Beijing. Only neighbor Shanghai is reachable; its distance becomes 1318.  
+2. **Iteration 2**: Shanghai is the unvisited vertex with smallest distance (1318). All three unvisited neighbors (Hangzhou, Guangzhou, Shenzhen) are updated with new distances via Shanghai.  
+3. **Iteration 3**: Hangzhou (1496) is selected. Its only unvisited neighbor is Guangzhou, but the path via Hangzhou (2646) is longer than the existing one (2530), so no update occurs.  
+4. **Iteration 4**: Shenzhen (2528) is selected. The path to Guangzhou via Shenzhen (2665) is worse than current (2530) → no update.  
+5. **Iteration 5**: Finally Guangzhou is processed; all its neighbors are already visited, so the algorithm terminates.  
+
+The final `distances` and `previous` dictionaries give the shortest distances and paths from Beijing to all cities, exactly as printed by the original code.
+
+  
